@@ -1,0 +1,11 @@
+# BONUS - development override, usage:
+#   docker compose -f compose.yml -f compose.dev.yml up --build
+#
+# Goal: edit the code on your machine and see the change without rebuilding.
+# TODO web: reuse the "build" stage of ./web/Dockerfile (target), run "npm run dev",
+#           publish 5173, bind-mount ./web on /app
+#           and keep the container's node_modules with an anonymous volume on /app/node_modules
+# TODO api: bind-mount ./api on /app (same node_modules trick)
+#           and start it with "node --watch server.js"
+
+services: {}

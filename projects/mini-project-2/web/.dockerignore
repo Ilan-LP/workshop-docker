@@ -1,0 +1,2 @@
+# TODO: node_modules and dist must not be sent to the build context.
+# Add a few more things that have no business in an image.

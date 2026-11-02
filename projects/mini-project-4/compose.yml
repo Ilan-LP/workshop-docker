@@ -1,0 +1,25 @@
+# Mini-project 4 - the full stack: web (nginx) + api (Node) + db (Postgres)
+# Fill in every TODO. Hints are in README.md
+
+services:
+  web:
+    # TODO 1: build ./web
+    # TODO 2: this is the ONLY service reachable from your machine:
+    #         publish container port 80 on host port 8080
+    # TODO 3: attach it to the "frontend" network only
+
+  api:
+    # TODO 4: build ./api, DATABASE_URL like in mini-project 3
+    # TODO 5: start it only once the database is HEALTHY
+    #         (depends_on with a condition, not just a start order)
+    # TODO 6: attach it to BOTH networks (frontend + backend)
+    #         no "ports": nobody outside needs to talk to it directly
+
+  db:
+    # TODO 7: postgres:16-alpine with the same env, volume and init.sql as before
+    # TODO 8: add a healthcheck using pg_isready
+    #         (interval 5s, timeout 3s, retries 10)
+    # TODO 9: attach it to the "backend" network only,
+    #         so the web container cannot even resolve its name
+
+# TODO 10: declare the two networks and the named volume

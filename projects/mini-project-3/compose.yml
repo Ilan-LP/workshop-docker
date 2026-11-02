@@ -1,0 +1,22 @@
+# Mini-project 3 - API + Postgres with Docker Compose
+# Fill in every TODO. Hints are in README.md
+
+services:
+  api:
+    # TODO 1: build the image from ./api
+    # TODO 2: publish port 3000 of the container on port 3000 of your machine
+    # TODO 3: give the API its DATABASE_URL
+    #         format: postgres://USER:PASSWORD@HOST:5432/DBNAME
+    #         USER / PASSWORD / DBNAME come from the .env file
+    #         HOST is NOT localhost: what is the name of the database service?
+    # TODO 4: make sure the db container is started before the api
+
+  db:
+    # TODO 5: use the official postgres image, version 16, alpine variant
+    # TODO 6: pass POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_DB (from .env)
+    # TODO 7: persist the data in a NAMED volume
+    #         (Postgres stores its data in /var/lib/postgresql/data)
+    # TODO 8: run init.sql on first start
+    #         (anything mounted in /docker-entrypoint-initdb.d is executed)
+
+# TODO 9: declare the named volume here
